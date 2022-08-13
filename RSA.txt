@@ -1,0 +1,48 @@
+# Generating public/private rsa key pair.
+
+# change directory to the .ssh folder
+cd ~/.ssh
+
+# Now generate ssh public/private key pair
+
+ssh-keygen
+OR
+ssh-keygen -t rsa
+
+# give file name to save the key(use full path if you are not in the .ssh directory)
+
+id_rsa_bluehost
+OR 
+/root/.ssh/id_rsa_bluehost
+
+
+# Then two files are created, private and public(.pub):
+id_rsa_bluehost
+id_rsa_bluehost.pub
+
+# To see the content of the keys 
+cat id_rsa_bluehost
+cat id_rsa_bluehost.pub
+
+# Copy the content of the public key and put it in your remote server
+logi in to our host, eg. https://my.bluehost.com 
+>> Advanced >> Security >> SSH Acess >> Manage SSH Keys 
+>> Import Key >> Paste the public key and Import it >>  Manage >> authorize the Key
+
+# Now Log in to the remote server with the server password:
+
+ssh -p 2222 teraraor@50.87.249.41
+OR
+ssh -p 2222 teraraor@wubishet.com
+
+
+~~~~~~~~~~~~~~~
+Alternatively you can generate public/private key pair from the host itself
+logi in to our host, eg. https://my.bluehost.com 
+>> Advanced >> Security >> SSH Acess >> Manage SSH Keys
+>> Generate a new Key >> then download the private key to the local computer and put it in 
+the .ssh directory and delete it from the host.
+
+
+
+

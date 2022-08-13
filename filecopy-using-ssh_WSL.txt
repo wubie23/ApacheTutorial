@@ -1,0 +1,23 @@
+# Copy Files to Windows Subsystem for Linux WSL with SSH
+
+# Enable SSH in Windows Subsystem for Linux WSL
+sudo apt remove openssh-server
+sudo apt install openssh-server
+
+# After reinstalling openssh-server, edit the sshd_config file to allow password authentication.
+nano /etc/ssh/sshd_config
+PasswordAuthentication yes
+PermitRootLogin yes
+
+# After editing your sshd_config file, restart your SSH service using the following command:
+sudo service ssh restart
+
+# Find the IP address for your WSL installation.
+sudo apt install net-tools
+ifconfig
+
+# Now, we can use something like WinSCP to connect to the WSL installation.
+After connecting, we see the filesystem and are now in a position to start copying files 
+to Windows Subsystem for Linux WSL and back to the Windows host if needed. 
+Also, you can edit files directly.
+

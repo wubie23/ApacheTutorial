@@ -1,0 +1,39 @@
+How to Start, Stop, or Restart Apache Server on Ubuntu
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For Ubuntu and Debian users with an older version and WSL, 
+use the following commands in the terminal window to start Apache:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Start Apache:
+sudo service apache2 start
+OR
+sudo /etc/init.d/apache2 start
+
+
+# Check status to see whether Apache is enabled with the command:
+sudo service apache2 status
+OR
+sudo /etc/init.d/apache2 status
+
+
+# Stop Apache:
+sudo service apache2 stop
+OR
+sudo /etc/init.d/apache2 stop
+
+
+# Restart Apache:
+sudo service apache2 restart
+OR
+sudo /etc/init.d/apache2 restart
+
+~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For Ubuntu users with versions 16.04 and 18.04 and Debian 9.x users, 
+use the following commands in the terminal window to start Apache:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+sudo systemctl start apache2
+sudo systemctl status apache2
+sudo systemctl stop apache2
+sudo systemctl restart apache2
